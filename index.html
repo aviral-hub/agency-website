@@ -1,5 +1,3 @@
-Sure! We can add some animations using Tailwind CSS and a bit of custom CSS for background moving elements. Here's the updated code with animations and background moving elements:
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -14,290 +12,241 @@ Sure! We can add some animations using Tailwind CSS and a bit of custom CSS for 
         body {
             font-family: 'Roboto', sans-serif;
         }
-        .animate-fade-in {
-            animation: fadeIn 1s ease-in-out;
-        }
-        .animate-slide-up {
-            animation: slideUp 1s ease-in-out;
-        }
-        .animate-slide-left {
-            animation: slideLeft 1s ease-in-out;
-        }
-        .animate-slide-right {
-            animation: slideRight 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideLeft {
-            from {
-                transform: translateX(20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideRight {
-            from {
-                transform: translateX(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        .background-element {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: rgba(128, 0, 128, 0.1);
-            border-radius: 50%;
-            animation: move 10s infinite;
-        }
-        @keyframes move {
-            0% {
-                transform: translate(0, 0);
-            }
-            50% {
-                transform: translate(50px, 50px);
-            }
-            100% {
-                transform: translate(0, 0);
-            }
-        }
     </style>
 </head>
-<body class="bg-gray-50 relative overflow-hidden">
-    <!-- Background Moving Elements -->
-    <div class="background-element top-10 left-10"></div>
-    <div class="background-element top-20 right-20"></div>
-    <div class="background-element bottom-10 left-20"></div>
-    <div class="background-element bottom-20 right-10"></div>
-
-    <!-- Header -->
-    <header class="bg-white shadow-md animate-fade-in">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-purple-600">FinBiz</div>
-            <nav class="space-x-4">
-                <a class="text-gray-600 hover:text-purple-600" href="#">Home</a>
-                <a class="text-gray-600 hover:text-purple-600" href="#">About</a>
-                <a class="text-gray-600 hover:text-purple-600" href="#">Services</a>
-                <a class="text-gray-600 hover:text-purple-600" href="#">Team</a>
-                <a class="text-gray-600 hover:text-purple-600" href="#">Contact</a>
-            </nav>
-            <button class="bg-purple-600 text-white px-4 py-2 rounded">Get Started</button>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-purple-600">FinBiz</div>
+        <nav class="space-x-4">
+            <a class="text-gray-600 hover:text-purple-600" href="#">Home</a>
+            <a class="text-gray-600 hover:text-purple-600" href="#">About</a>
+            <a class="text-gray-600 hover:text-purple-600" href="#">Services</a>
+            <a class="text-gray-600 hover:text-purple-600" href="#">Team</a>
+            <a class="text-gray-600 hover:text-purple-600" href="#">Contact</a>
+        </nav>
+        <button class="bg-purple-600 text-white px-4 py-2 rounded">Get Started</button>
+    </div>
+</header>
+<!-- Hero Section -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+            <span class="text-purple-600 font-semibold">We Are Digital Agency</span>
+            <h1 class="text-4xl font-bold mt-4">Welcome to Creative Digital Agency</h1>
+            <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button class="bg-purple-600 text-white px-6 py-3 mt-6 rounded">Learn More</button>
         </div>
-    </header>
-    <!-- Hero Section -->
-    <section class="bg-white py-20 animate-slide-up">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mt-10 md:mt-0">
+            <img alt="Team working together on a project" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/5I0Cr4kS60befURHfXQzbgsQgTOecfZvuVkwQKuzssHI9W6gC.jpg" width="500"/>
+        </div>
+    </div>
+</section>
+<!-- About Section -->
+<section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
             <div class="md:w-1/2">
-                <span class="text-purple-600 font-semibold">We Are Digital Agency</span>
-                <h1 class="text-4xl font-bold mt-4">Welcome to Creative Digital Agency</h1>
+                <img alt="Team discussion" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/VeI1iU61nNVIFiIpAG9w2hv7cvumUhflewDeftkS8QIS9W6gC.jpg" width="500"/>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10">
+                <span class="text-purple-600 font-semibold">About Us</span>
+                <h2 class="text-3xl font-bold mt-4">What's So Special About Agency?</h2>
                 <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <ul class="list-disc list-inside mt-4 text-gray-600">
+                    <li>Creative Design</li>
+                    <li>Professional Team</li>
+                    <li>24/7 Support</li>
+                </ul>
                 <button class="bg-purple-600 text-white px-6 py-3 mt-6 rounded">Learn More</button>
             </div>
-            <div class="md:w-1/2 mt-10 md:mt-0">
-                <img alt="Team working together on a project" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/5I0Cr4kS60befURHfXQzbgsQgTOecfZvuVkwQKuzssHI9W6gC.jpg" width="500"/>
+        </div>
+    </div>
+</section>
+<!-- Services Section -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <span class="text-purple-600 font-semibold">Our Services</span>
+            <h2 class="text-3xl font-bold mt-4">Our Creative Services</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+            <!-- Service 1 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Website Development Services</h3>
+                <ul class="list-disc list-inside mt-4 text-gray-600">
+                    <li>E-commerce Website Development: Build feature-rich, user-friendly online stores to enhance customer experience and boost sales.</li>
+                    <li>Static & Dynamic Website Development: Create responsive, visually appealing websites that align with your business goals.</li>
+                    <li>Shopify & WordPress Development: Leverage the power of leading platforms to establish a strong and scalable online presence.</li>
+                </ul>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Digital Marketing & SEO Solutions</h3>
+                <ul class="list-disc list-inside mt-4 text-gray-600">
+                    <li>SEO Services: Improve your website’s visibility on search engines and drive organic traffic with our proven SEO strategies.</li>
+                    <li>Content Marketing: Craft engaging content that resonates with your audience and enhances brand recognition.</li>
+                    <li>Social Media Marketing: Expand your reach and connect with your target audience through strategic social media campaigns.</li>
+                </ul>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Graphic Design Services</h3>
+                <ul class="list-disc list-inside mt-4 text-gray-600">
+                    <li>Logo & Branding Design: Develop a strong visual identity for your brand with custom logos and branding materials.</li>
+                    <li>Poster & Dynamic Graphic Design: Create eye-catching designs for digital and print media to captivate your audience.</li>
+                </ul>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold">Custom IT Solutions</h3>
+                <ul class="list-disc list-inside mt-4 text-gray-600">
+                    <li>Custom IT Solutions tailored to your business needs.</li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!-- About Section -->
-    <section class="bg-gray-100 py-20 animate-slide-left">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2">
-                    <img alt="Team discussion" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/VeI1iU61nNVIFiIpAG9w2hv7cvumUhflewDeftkS8QIS9W6gC.jpg" width="500"/>
-                </div>
-                <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10">
-                    <span class="text-purple-600 font-semibold">About Us</span>
-                    <h2 class="text-3xl font-bold mt-4">What's So Special About Agency?</h2>
-                    <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Creative Design</li>
-                        <li>Professional Team</li>
-                        <li>24/7 Support</li>
-                    </ul>
-                    <button class="bg-purple-600 text-white px-6 py-3 mt-6 rounded">Learn More</button>
-                </div>
+    </div>
+</section>
+<!-- Video Section -->
+<section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <span class="text-purple-600 font-semibold">About Us</span>
+                <h2 class="text-3xl font-bold mt-4">Our Digital Agency Delivers Extraordinary Business Value.</h2>
+                <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <ul class="list-disc list-inside mt-4 text-gray-600">
+                    <li>Creative Design</li>
+                    <li>Professional Team</li>
+                    <li>24/7 Support</li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10">
+                <img alt="Team working on a project" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/eUiKbAZyBBTeJ0cHnCLxecO92KbVTRgDckNTuwHcPEWuvlOoA.jpg" width="500"/>
             </div>
         </div>
-    </section>
-    <!-- Services Section -->
-    <section class="bg-white py-20 animate-slide-right">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <span class="text-purple-600 font-semibold">Our Services</span>
-                <h2 class="text-3xl font-bold mt-4">Our Creative Services</h2>
+    </div>
+</section>
+<!-- Dynamic Step Process Section -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <span class="text-purple-600 font-semibold">Get Started</span>
+            <h2 class="text-3xl font-bold mt-4">Start Your Project Journey</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 text-center">
+            <!-- Step 1 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <i class="fas fa-phone-alt text-purple-600 text-4xl"></i>
+                <h3 class="text-xl font-bold mt-4">Call Us</h3>
+                <p class="text-gray-600 mt-2">Start your project journey with a conversation. We're here to understand your needs and offer expert guidance to set the foundation for your success.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-                <!-- Service 1 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Website Development Services</h3>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>E-commerce Website Development: Build feature-rich, user-friendly online stores to enhance customer experience and boost sales.</li>
-                        <li>Static & Dynamic Website Development: Create responsive, visually appealing websites that align with your business goals.</li>
-                        <li>Shopify & WordPress Development: Leverage the power of leading platforms to establish a strong and scalable online presence.</li>
-                    </ul>
-                </div>
-                <!-- Service 2 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Digital Marketing & SEO Solutions</h3>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>SEO Services: Improve your website’s visibility on search engines and drive organic traffic with our proven SEO strategies.</li>
-                        <li>Content Marketing: Craft engaging content that resonates with your audience and enhances brand recognition.</li>
-                        <li>Social Media Marketing: Expand your reach and connect with your target audience through strategic social media campaigns.</li>
-                    </ul>
-                </div>
-                <!-- Service 3 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Graphic Design Services</h3>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Logo & Branding Design: Develop a strong visual identity for your brand with custom logos and branding materials.</li>
-                        <li>Poster & Dynamic Graphic Design: Create eye-catching designs for digital and print media to captivate your audience.</li>
-                    </ul>
-                </div>
-                <!-- Service 4 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Custom IT Solutions</h3>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Custom IT Solutions tailored to your business needs.</li>
-                    </ul>
-                </div>
+            <!-- Step 2 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <i class="fas fa-tasks text-purple-600 text-4xl"></i>
+                <h3 class="text-xl font-bold mt-4">Show Us Your Requirements</h3>
+                <p class="text-gray-600 mt-2">Share your vision and requirements with our team. We work closely with you to define every detail and ensure our solutions meet your expectations.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <i class="fas fa-clipboard-check text-purple-600 text-4xl"></i>
+                <h3 class="text-xl font-bold mt-4">Receive Your Project</h3>
+                <p class="text-gray-600 mt-2">From concept to completion, we deliver a project that's ready to launch, perfectly aligned with your goals and designed to make an impact.</p>
             </div>
         </div>
-    </section>
-    <!-- Video Section -->
-    <section class="bg-gray-100 py-20 animate-slide-up">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2">
-                    <span class="text-purple-600 font-semibold">About Us</span>
-                    <h2 class="text-3xl font-bold mt-4">Our Digital Agency Delivers Extraordinary Business Value.</h2>
-                    <p class="text-gray-600 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <ul class="list-disc list-inside mt-4 text-gray-600">
-                        <li>Creative Design</li>
-                        <li>Professional Team</li>
-                        <li>24/7 Support</li>
-                    </ul>
-                </div>
-                <div class="md:w-1/2 mt-10 md:mt-0 md:pl-10">
-                    <img alt="Team working on a project" class="rounded-lg shadow-lg" height="500" src="https://storage.googleapis.com/a1aa/image/eUiKbAZyBBTeJ0cHnCLxecO92KbVTRgDckNTuwHcPEWuvlOoA.jpg" width="500"/>
-                </div>
+        <div class="text-center mt-10">
+            <button class="bg-purple-600 text-white px-6 py-3 rounded">CALL NOW</button>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <span class="text-purple-600 font-semibold">Our Work</span>
+            <h2 class="text-3xl font-bold mt-4">Let's See Our Best Work</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <img alt="Web Development" class="rounded-lg" height="500" src="https://storage.googleapis.com/a1aa/image/fQFfsecyY9YzmogLqvPq6rqlcSB9CFUWys9IEDJJYYfYfW6gC.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">Web Development</h3>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <img alt="App Development" class="rounded-lg" height="500" src="https://storage.googleapis.com/a1aa/image/Jp11ExxOaa7jEhnVWOTMI3NoTexeepdCno8ERy1CdTkeeW6gC.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">App Development</h3>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                <img alt="Graphic Design" class="rounded-lg" height="500" src="https://storage.googleapis.com/a1aa/image/aMJPTHnBRPqFAtKLjfjwaIcae9T7vXfOTvrInBJyvZVPvlOoA.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">Graphic Design</h3>
             </div>
         </div>
-    </section>
-    <!-- Dynamic Step Process Section -->
-    <section class="bg-white py-20 animate-slide-left">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <span class="text-purple-600 font-semibold">Get Started</span>
-                <h2 class="text-3xl font-bold mt-4">Start Your Project Journey</h2>
+    </div>
+</section>
+<!-- Team Section -->
+<section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <span class="text-purple-600 font-semibold">Our Team</span>
+            <h2 class="text-3xl font-bold mt-4">Meet Our Team</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img alt="Team member 1" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/YMmecTMjxZxMLifwCjt6ANZeR4gBlB38j0ZGnM57n1PpvlOoA.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">John Doe</h3>
+                <p class="text-gray-600">CEO</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 text-center">
-                <!-- Step 1 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-phone-alt text-purple-600 text-4xl"></i>
-                    <h3 class="text-xl font-bold mt-4">Call Us</h3>
-                    <p class="text-gray-600 mt-2">Start your project journey with a conversation. We're here to understand your needs and offer expert guidance to set the foundation for your success.</p>
-                </div>
-                <!-- Step 2 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-tasks text-purple-600 text-4xl"></i>
-                    <h3 class="text-xl font-bold mt-4">Show Us Your Requirements</h3>
-                    <p class="text-gray-600 mt-2">Share your vision and requirements with our team. We work closely with you to define every detail and ensure our solutions meet your expectations.</p>
-                </div>
-                <!-- Step 3 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-clipboard-check text-purple-600 text-4xl"></i>
-                    <h3 class="text-xl font-bold mt-4">Receive Your Project</h3>
-                    <p class="text-gray-600 mt-2">From concept to completion, we deliver a project that's ready to launch, perfectly aligned with your goals and designed to make an impact.</p>
-                </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img alt="Team member 2" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/CgMOUbe1IjXlQyXf0CoeSZakafH2gbaKkyAWouedVqyHet0BF.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">Jane Smith</h3>
+                <p class="text-gray-600">CTO</p>
             </div>
-            <div class="text-center mt-10">
-                <button class="bg-purple-600 text-white px-6 py-3 rounded">CALL NOW</button>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img alt="Team member 3" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/YAOE4wv8AYYCLZFrlnws9VaOA5d4K2ywFRWSThvrLqo8t0BF.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">Mike Johnson</h3>
+                <p class="text-gray-600">Lead Developer</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img alt="Team member 4" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/xwteXowXKekO9Eho49V2eVeNILiUyvTN2LNQSfqbSZig9W6gC.jpg" width="500"/>
+                <h3 class="text-xl font-bold mt-4">Emily Davis</h3>
+                <p class="text-gray-600">Designer</p>
             </div>
         </div>
-    </section>
-    <!-- Portfolio Section -->
-    <section class="bg-white py-20 animate-slide-right">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <span class="text-purple-600 font-semibold">Our Work</span>
-                <h2 class="text-3xl font-bold mt-4">Let's See Our Best Work</h2>
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section class="bg-white py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <span class="text-purple-600 font-semibold">Testimonials</span>
+            <h2 class="text-3xl font-bold mt-4">What Clients Say About Us</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                <img alt="Client 1" class="rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/TmC6cvT83c6EHlkXbDZZasJeVfeltcuOFAmUio0AYAbcvlOoA.jpg" width="100"/>
+                <p class="text-gray-600 mt-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                <h3 class="text-xl font-bold mt-4">Client 1</h3>
+                <p class="text-gray-600">CEO, Company 1</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <img alt="Web Development" class="rounded-lg" height="500" src="https://storage.googleapis.com/a1aa/image/fQFfsecyY9YzmogLqvPq6rqlcSB9CFUWys9IEDJJYYfYfW6gC.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">Web Development</h3>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <img alt="App Development" class="rounded-lg" height="500" src="https://storage.googleapis.com/a1aa/image/Jp11ExxOaa7jEhnVWOTMI3NoTexeepdCno8ERy1CdTkeeW6gC.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">App Development</h3>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <img alt="Graphic Design" class="rounded-lg" height="500" src="https://storage.googleapis.com/a1aa/image/aMJPTHnBRPqFAtKLjfjwaIcae9T7vXfOTvrInBJyvZVPvlOoA.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">Graphic Design</h3>
-                </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                <img alt="Client 2" class="rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/YA2BnPGQaMozIppzB8UClgDxcHvAoI5f7JAE4ewyzUKx3SHUA.jpg" width="100"/>
+                <p class="text-gray-600 mt-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                <h3 class="text-xl font-bold mt-4">Client 2</h3>
+                <p class="text-gray-600">CTO, Company 2</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+                <img alt="Client 3" class="rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/8B8fu9Z0WcSMTyG2OF3AIUxTqlUyXCKUoJYriM2G3xB8bpDKA.jpg" width="100"/>
+                <p class="text-gray-600 mt-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                <h3 class="text-xl font-bold mt-4">Client 3</h3>
+                <p class="text-gray-600">Manager, Company 3</p>
             </div>
         </div>
-    </section>
-    <!-- Team Section -->
-    <section class="bg-gray-100 py-20 animate-slide-up">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <span class="text-purple-600 font-semibold">Our Team</span>
-                <h2 class="text-3xl font-bold mt-4">Meet Our Team</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10 text-center">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="Team member 1" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/YMmecTMjxZxMLifwCjt6ANZeR4gBlB38j0ZGnM57n1PpvlOoA.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">John Doe</h3>
-                    <p class="text-gray-600">CEO</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="Team member 2" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/CgMOUbe1IjXlQyXf0CoeSZakafH2gbaKkyAWouedVqyHet0BF.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">Jane Smith</h3>
-                    <p class="text-gray-600">CTO</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="Team member 3" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/YAOE4wv8AYYCLZFrlnws9VaOA5d4K2ywFRWSThvrLqo8t0BF.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">Mike Johnson</h3>
-                    <p class="text-gray-600">Lead Developer</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="Team member 4" class="rounded-full mx-auto" height="500" src="https://storage.googleapis.com/a1aa/image/xwteXowXKekO9Eho49V2eVeNILiUyvTN2LNQSfqbSZig9W6gC.jpg" width="500"/>
-                    <h3 class="text-xl font-bold mt-4">Emily Davis</h3>
-                    <p class="text-gray-600">Designer</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials Section -->
-    <section class="bg-white py-20 animate-slide-left">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <span class="text-purple-600 font-semibold">Testimonials</span>
-                <h2 class="text-3xl font-bold mt-4">What Clients Say About Us</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
-                    <img alt="Client 1" class="rounded-full mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/TmC6cvT
+    </div>
+</section>
+<!-- Newsletter Section -->
+<section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <span class="text-purple-600 font-semibold">Newsletter</span>
+            <h2 class="text-3xl font-bold mt-4">Subscribe Our Newsletter</h2>
+            <
